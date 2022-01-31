@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script id="jqbb" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: black;
+				user-select: none;
+				margin: 0;
+				font-family: "Poppins", sans-serif;
+			}
+
+			.city {
+				width: 100%;
+				position: fixed;
+				bottom: 0px;
+				z-index: 100;
+			}
+
+			.city img {
+				width: 100%;
+			}
+
+			audio {
+				opacity: 0;
+			}
+			.btn-groups {
+				display: flex;
+				justify-content: center;
+				column-gap: 20px;
+				margin-top: 20px;
+			}
+			.btn-groups button {
+				border-radius: 8px;
+				border: none;
+				font-size: 18px;
+				width: 135px;
+				padding: 8px 0;
+			}
+			#yes {
+				background-color: rgb(65, 219, 186);
+			}
+			#no {
+				background-color: rgb(114, 131, 228);
+			}
+		</style>
+		<title>Happy new year</title>
+		<link href="./css/modal.css" rel="stylesheet" />
+	</head>
+
+	<body onselectstart="return false">
+		<div class="star comet"></div>
+		<script src="js/index.js"></script>
+		<div class="page_one">
+			<div class="content">
+				<div class="text_wrapper">
+					<img class="xin" src="images/xin.png" alt="" />
+					<div class="text">Hello Hoa, em đã sẵn sàng cho năm mới chưa?</div>
+				</div>
+			</div>
+			<div class="btn-groups">
+				<button id="yes">Sẵn sàng</button>
+				<button id="no">Chưa sẵn sàng</button>
+			</div>
+		</div>
+		<canvas id="cas" style="background-color: rgba(0, 5, 24, 1); z-index: 9999"> content </canvas>
+		<div class="city">
+			<img src="images/city.png" alt="" />
+		</div>
+		<img src="images/moon.png" alt="" id="moon" style="visibility: hidden" />
+		<div style="display: none">
+			<div class="shape">Happy new year</div>
+			<div class="shape">Có người yêu</div>
+			<div class="shape">Hạnh phúc</div>
+			<div class="shape">Vui vẻ</div>
+			<div class="shape">Lấy chồng</div>
+			<div class="shape">Vạn sự như ý</div>
+			<div class="shape">Có anh</div>
+			<div class="shape">Lấy anh</div>
+			<div class="shape">May mắn</div>
+			<div class="shape">Phát tài</div>
+			<div class="shape">Phát lộc</div>
+		</div>
+		<audio autoplay loop controls id="playAudio" style="visibility: hidden">
+			<source src="./images/audio.mp3" type="audio/mp3" />
+		</audio>
+		<iframe id="iframMusic" allow="autoplay" style="display: none" src="./images/blank.mp3"></iframe>
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/fire.js"></script>
+		<script src="./js/talk.js"></script>
+		<script>
+			$(document).on("click", "body", function () {
+				let audio = document.getElementById("playAudio");
+				audio.play();
+			});
+		</script>
+	</body>
+</html>
