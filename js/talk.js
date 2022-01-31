@@ -32,7 +32,7 @@ function E() {
 }
 
 function F() {
-	modal("Chúc Dung 2022 phát tài phát lộc &#128181", G);
+	modal("Chúc Hoa 2022 phát tài phát lộc &#128181", G);
 }
 
 function G() {
